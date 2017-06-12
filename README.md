@@ -11,7 +11,7 @@ Aleph-0 is a web-based search assistant that can be used to query both general a
 	Create 1 database and 2 tables using the dump.sql file located in the sql_dump directory.
 	
 	* A user 'dbuser' with password 'cs4640' must be created in the system in order for the application to work properly.
-  * Required images are in the images directory: aleph-icon.png and modern.jpg
+  	* Required images are in the images directory: aleph-icon.png and modern.jpg
 	
 	Proceed to the index.html (not index.php) page to view the generic page displayed to the general user.
 	
