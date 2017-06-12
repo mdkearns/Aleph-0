@@ -1,0 +1,11 @@
+/*
+ *    STYLE THE STICKY FOOTER
+ */
+footer {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: lightgray;
+	padding: 10px;
+}

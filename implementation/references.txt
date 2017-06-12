@@ -1,0 +1,48 @@
+	
+	
+	uvaid: mdk2mc
+
+	REFERENCES:
+
+	https://stackoverflow.com/questions/3794919/replace-all-spaces-in-a-string-with
+	-->replacing spaces with pluses in javascript
+
+	https://fonts.google.com/specimen/Architects+Daughter
+	http://www.cssfontstack.com/Architects-Daughter
+	--> Architect's Daugter font
+
+	https://codepen.io/jasonchan/pen/JXwONj
+	-->sending synchronous AJAX requests to wikipedia
+
+	http://products.wolframalpha.com/api/explorer/
+	--> using the wolfram alpha full results API
+
+	https://pixabay.com/en/forest-abstract-geometry-background-2325934/
+	--> background image for web application
+
+	https://www.w3schools.com/cssref/pr_background-image.asp
+	--> setting background image using CSS
+
+	https://www.w3schools.com/css/css3_buttons.asp
+	-->styling CSS buttons
+	
+	https://stackoverflow.com/questions/17748283/how-to-redirect-user-to-another-page-after-ajax-form-submission
+	-->redirect to home page after successful ajax request
+	
+	http://php.net/manual/en/mysqli-result.fetch-assoc.php
+	-->for determining fetch_assoc return value
+	
+	https://www.w3schools.com/js/js_popup.asp
+	--> javascript prompt boxes
+	
+	https://stackoverflow.com/questions/15179814/transparency-with-footer-in-css
+	--> Opacity in CSS
+
+	http://www.cssmatic.com/box-shadow
+	-->div shadow
+
+	https://www.w3schools.com/tags/att_input_placeholder.asp
+	--> placeholder for textbox
+	
+	https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html
+	-->creating the dump.sql file to reproduce the database, tables, and users/queries

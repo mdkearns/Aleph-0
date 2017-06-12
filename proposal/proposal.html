@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CS4640 Final Project</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<div class="container">
+		<div class="container">
+		<center>
+		<h1>A Web-Based Search Assistant: Aleph-0</h1>
+		<h1>CS4640 Final Project Proposal</h1>
+		<h3>Matt Kearns</h3>
+		</center>
+		</div>
+			
+		<br/><h2>High-Level Description</h2><br/>
+		
+			<p>
+				Aleph-0 uses both the Wolfram|Alpha Computational Knowledge Engine and the Wikipedia Search Engine 
+				to generate search results. Aleph-0 is designed to make traversing the web for general knowledge easy. 
+				Wolfram|Alpha and Wikipedia do the heavy lifting for this application. This web-based search assistant 
+				will not only help query knowledge, but will also help you retain it. Each query made through Aleph-0 can
+				be saved for later review. In order to view past queries, the user must create an account with Aleph-0.
+				Of course, a user may use Aleph-0 without having an account, but doing so will only afford limited functionality.
+				Aleph-0 has the following features:
+				
+				<br/>
+				<ul>
+					<li>Personalized Page</li>
+					<li>Web Search Form</li>
+					<li>Save Web Search</li>
+					<li>Review Past Queries</li>
+					<li>Visualization Tools</li>
+				</ul>
+				
+				Aleph-0 provides its users with a simple, yet complete interface upon log in. The user is able to specify a 
+				search type prior to submitting the web search form in order to help Aleph-0 return results faster from the 
+				correct knowledge engine. If Aleph-0 is able to successfully query results about the user's search, then it
+				will generate a results section in two parts: a query title and a query answer. The user then has the ability 
+				to save these results for later in the form of a flash card. This ability, however, is only possible if the user
+				has an account with Aleph-0. Of course, Aleph-0 also provides the ability to visualize user statistics, such as
+				the total number of queries made by the user, the number of successful and unsuccessful queries, and the number 
+				of saved queries.<br/><br/>
+				
+				Aleph-0 will help you learn new things and visualize your usage statistics, but how did Aleph-0 get its name? 
+				In set theory, <img src="images/aleph-0.gif"> is a number that is used to represent the size of a countably infinite
+				set. This refers to the cardinality of a set. For example, a set that can be put into one-to-one correspondence with 
+				the natural numbers is considered to be of size <img src="images/aleph-0.gif">. As per Wikipedia,
+				
+				<br/><br/>
+				<blockquote>
+					"...the aleph numbers are a sequence of numbers used to represent the cardinality of infinite sets that can 
+					be well-ordered. They are named after the symbol used to denote them, the Hebrew letter aleph."
+				</blockquote>
+				
+				The Hebrew letter, aleph, is the first letter of the Hebrew alphabet, and alpha is the first letter of the greek alphabet.
+				The name is meant to be a play on the word Alpha in Wolfram|Alpha. A computational knowledge/search engine named after a counting number
+				used to define infinite sets seems to be fitting.
+				
+			</p>
+		
+		<br/><h2>Technical Details</h2><br/>
+		
+			<h3>Functional Requirements</h3>
+			
+			<p>
+				Every well-defined project has functional requirements that must be met. Aleph-0 must be able to do the following: 
+			</p>
+			
+			<ol>
+				<li>Provide a space for users to log in</li>
+				<li>Display a custom page for a 'logged in' user</li>
+				<li>Display a generic page for general users</li>
+				<li>Successfully query knowledge from Wikipedia and Wolfram|Alpha</li>
+				<li>Display search results in a visually pleasing manner to its user</li>
+				<li>Provide the ability for a user to save query results to later</li>
+				<li>Provide the ability for a user to view their Aleph-0 usage statistics</li>
+			</ol>
+			
+			<p>
+				In the next few paragraphs, we will see how we can successfully acheive these high-level functional requirements, while
+				defining several more technical requirements related to the front- and back-end functionality.
+			</p>
+			
+			
+			<h3>Front-End Functionality and Description</h3>
+			
+			<p>
+				On the client side, the program must provide a space for the user to log in. Upon receving the webpage for Aleph-0, a generic 
+				version of Aleph-0 will be displayed to the user, and a button for logging into a user account will be present in the upper
+				right corner of the viewport. Clicking the log in button opens an authentication page, where the user can securely type in their
+				account username and password. Pressing the submit button starts the authentication process, and the user will be redirected to 
+				page customized for them (i.e. display their name at the top). At their page, the user can specify, using a drop down menu, the
+				type of query they wish to perform: a computational type query or a general knowledge type query. This user-specification is used
+				by the application to help branch to the correct knowledge engine for search results; however, an unsuccessful attempt to query knowledge
+				from one engine will result in the attempt to query results from the other. Therefore, it is to the user's advantage to specify the 
+				correct type of query each time in order for Aleph-0 to return faster results. Each saved query by the user is displayed in a small table
+				that holds a query number and title, so that the user can retrieve these results later.
+			</p>
+			
+			<p>
+				The front-end code is also responsible for handling the dynamic display of information to the user. Through AJAX requests to PHP back-end code,
+				the JavaScript front-end will be able to dynamically display information to the user, such as search results, saved searches, and usage statistics.
+				AJAX requests will also be used to asynchronously communicate back the results from the Wolfram|Alpha and Wikipedia knowledge engines for display of
+				initial query results.
+			</p>
+			
+			<h3>Communicating with Wolfram|Alpha and Wikipedia</h3>
+			
+			<p>
+				Communication with the external knowledge engines is made easy through Asynchrounous AJAX requests. An AJAX request can be made to retrieve search results
+				from Wolfram|Alpha or Wikipedia. Doing so, however, requires a bit more work on the front end for displaying the results of a new query. Much of the work for 
+				displaying results can be done on the server side once a query is saved to the database. Wikipedia provides textual descriptions for search results, while 
+				Wolfram|Alpha provides pictorial descriptions. The front-end code will need to handle the rendering of information from these sources differently.
+			</p>
+			
+			
+			<h3>Back-End Functionality and Description</h3>
+			
+			<p>
+				On the server side, the program must be able to store previous query results upon request from the user. The back-end PHP code will be used to 
+				communicate with the MySQL Database Management System (DBMS) and relate results back to the client by encoding the results in the JSON format. The
+				back-end PHP code will also need to handle user account authentication by communicating with a user table in the database. The PHP code will indicate
+				that a user has successfully logged in if the user-supplied account credentials are in the database. The PHP code will send information back to the client, 
+				so that the client will be able to render a unique, customized page for its user. The PHP back-end code will divide its tasks into three parts as per the 
+				MVC framework: a model used to store and retrieve information from the database, a controller used to control queries sent to the database through 
+				user-supplied input (i.e. a command to store new query results vs. retrieving past query results), and a view used to structure information to be returned to
+				the client. Each query will have a unique identifier, so that the user can retrieve past queries more easily.
+			</p>
+			
+			
+		
+		<br/><h2>Project Timeline</h2><br/>
+		
+		<table class="table">
+			<thead>
+				<th>Milestone</th>
+				<th>Description</th>
+				<th>Due Date</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Front-End</td>
+					<td>A fully functioning front-end should be available at this date. 
+					The client-side will be able to query the knowledge engines for results, 
+					but these results will not be able to be saved until the back-end is finished. 
+					The user can access the log in page, but will not be able to authenticate their log in credentials yet. 
+					The uasage statistics cannot be view yet, since the database has not yet been populated by query results. 
+					Stubs will be created for testing the front-end.</td>
+					<td>Wednesday<br/>June 7th</td>
+				</tr>
+				<tr>
+					<td>Back-End</td>
+					<td>A fully functioning back-end should be available at this date. The program should work seemlessly without bugs.</td>
+					<td>Friday<br>June 9th</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted">Matt Kearns - mdk2mc</span>
+			</div>
+		</footer>
+		
+		<br/><br/><br/>
+	</div>
+	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+</html>

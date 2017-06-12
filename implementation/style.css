@@ -1,0 +1,153 @@
+/*
+ *    STYLE THE BACKGROUND
+ */
+body {
+	background-image: url("images/modern.jpg");
+}
+
+/*
+ *    STYLE THE CONTAINER DIV
+ */
+#container {
+	font-family: Architects Daughter;
+	opacity: 0.85;
+	padding: 50px;
+	position: absolute;
+	top: 0px;
+	left: 200px;
+	right: 200px;
+	background-color: white;
+}
+
+/*
+ *    STYLE THE GENERIC HEADER TITLE
+ */
+#title {
+	font-size: 40px;
+	color: white;
+}
+
+
+/*
+ *    STYLE THE HEADER
+ */
+ header {
+	padding: 15px;
+	float: top;
+	background-color: gray;
+	position: fixed;
+	top: 0px;
+	left: 200px;
+	right: 200px;
+ }
+
+/*
+ *    STYLE THE FOOTER
+ */
+footer {
+	font-size: 10px;
+	height: 50px;
+	padding: 10px;
+	background-color: gray;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/*
+ *    STYLE THE LOGIN BUTTONS
+ */
+#login-info {
+	padding: 5px;
+	padding-right: 50px;
+	float: right;
+}
+
+/*
+ *    STYLE THE CUSTOM HEADER TEXT
+ */
+#header-text {
+	color: white;
+	font-family: consolas;
+	font-size: 25px;
+	padding: 5px;
+	padding-left: 300px;
+	float: top;
+}
+
+/*
+ *    STYLE THE CUSTOM HEADER
+ */
+#custom-header {
+	color: white;
+	font-family: consolas;
+	font-size: 25px;
+	padding: 5px;
+	padding-left: 325px;
+	float: top;
+	right: 100px;
+}
+
+/*
+ *    STYLE THE SIGN IN/SIGN UP HEADER TEXT
+ */
+#sign-text {
+	color: white;
+	font-family: consolas;
+	font-size: 25px;
+	padding: 5px;
+	/*padding-right: 95px;*/
+	float: top;
+}
+
+/*
+ *    STYLE THE USER's NAME
+ */
+#name {
+	font-family: consolas;
+	color: white;
+	font-size: 20px;
+	padding: 5px;
+}
+
+/*
+ *    STYLE HOME ID
+ */
+#home {
+	padding: 5px;
+	padding-left: 50px;
+	float: left;
+}
+
+/*
+ *    STYLE THE BUTTONS
+ */
+.button {
+	background-color: darkgray;
+    border: none;
+	border-radius: 5px;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	margin-right: 10px;
+}
+
+/*
+ *    STYLE THE SAVE BUTTON
+ */
+#save {
+	background-color: green;
+    border: none;
+	border-radius: 5px;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	margin-right: 10px;
+}
